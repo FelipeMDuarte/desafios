@@ -1,0 +1,36 @@
+Olá!
+A solução final com ambas as partes e o extra do desafio está no arquivo main.py.
+O arquivo contém também uma função chamada testing que pode ser chamada para executar o código
+com diferentes tamanhos de linha rapidamente.
+O modo principal de utilização do projeto pode ser tanto importando o arquivo para o terminal e
+chamando a função por lá ou apenas executar o main.py com uma chamada a função 'text_formating'
+ao final do arquivo com os parametros desejados.
+Chamar a função 'testing' com o range de tamanho de linhas desejado também é uma opção.
+Também é possivel dizer por parametro se queremos as linhas jutificadas ou não.
+
+Sobre o processo de desenvolvimento:
+Primeiro tentei uma abordagem visando cada caracter do texto de entrada mas depois de algum
+tempo percebi que com essa visão eu estava tendo algumas dificuldades que julguei que não teria
+utilizando as palavras completas ao invés das letras, com isso mudei de abordagem.
+O começo dessa outra abordagem não finalizada está no arquivo 'failed_attempt_1'
+Após isso, utilizando as divisões de palavras e paragráfos consegui avançar mais no
+desenvolvimento da parte basica sem muitos problemas.
+Chegando a parte intermediaria esbarrei em alguns problemas ao tentar justificar algumas linhas
+demorei algum tempo para notar que esse problema acontecia quando o numero de espaços faltantes
+superava o numero de espaços originais da linha, foi então que percebi que precisaria de um loop
+para verificar varias vezes se a linha já estava corretamente justificada, consigo pensar em
+alguns outros meios de solucionar isso mas como também não tinha muitas informações de como as
+linhas deveriam ser justificadas (exemplo: preferencia de onde adicionar espaços) aceitei seguir
+com essa abordagem.
+Depois de estar justificando quase todas as linhas corretamente notei outro bug onde as linhas
+terminadas em pulo de linha eram justificadas com um caracter a mais e precisei me atentar e
+checar isso corretamente.
+Por último tive um problema onde com alguns limites de caracter por linha o programa não terminava
+depois de alguma investigação notei que em alguns casos uma palavra que "sobrou" do paragrafo não
+era adicionada a lugar nenhum porque o código não encontrar um espaço naquela linha para adicionar
+mais espaços, a solução foi fazer uma checagem especial para esse caso.
+
+Testes unitários:
+Crie um env da maneira de sua escolha.
+Instale pytest ( `pip install pytest` )
+Rode com `pytest strings/test_main.py`

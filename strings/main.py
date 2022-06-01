@@ -4,18 +4,10 @@ def text_formating(text: str, line_length: int = 41, justify: bool = False):
         split_paragraphs = text.split("\n\n")
         with open('strings/outputs/output-file.txt', "w") as file:
             for paragraph in split_paragraphs:
-                split_text = paragraph.split(" ")
+                words = paragraph.split(" ")
                 first_next_line = None
-                for x in split_text:
-                    if first_next_line:
-                        formated_line.append(first_next_line)
-                        first_next_line = None
-                    if len(" ".join(formated_line+[x])) < line_length:
-                        formated_line.append(x)
-                    else:
-                        first_next_line = x
-                        insert_line(file, formated_line, line_length, justify)
-                        formated_line = []
+                formated_line, first_next_line = make_line(
+                    words, line_length, file, justify, first_next_line)
                 left_out_to_insert = formated_line or [first_next_line]
                 insert_line(file, left_out_to_insert, line_length, justify)
                 formated_line = []
@@ -23,6 +15,21 @@ def text_formating(text: str, line_length: int = 41, justify: bool = False):
     except BaseException as e:
         print(f'Unknown error running text formating: {str(e)}')
         raise e
+
+
+def make_line(words, line_length, file, justify=False, first_next_line=None):
+    formated_line = []
+    for word in words:
+        if first_next_line:
+            formated_line.append(first_next_line)
+            first_next_line = None
+        if len(" ".join(formated_line + [word])) < line_length:
+            formated_line.append(word)
+        else:
+            first_next_line = word
+            insert_line(file, formated_line, line_length, justify)
+            formated_line = []
+    return formated_line, first_next_line
 
 
 def insert_line(file, formated_line: list, line_length: int, justify: bool):

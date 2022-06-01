@@ -6,16 +6,17 @@ O modo principal de utilização do projeto pode ser tanto importando o arquivo 
 chamando a função por lá ou apenas executar o main.py com uma chamada a função 'text_formating'
 ao final do arquivo com os parametros desejados.
 Chamar a função 'testing' com o range de tamanho de linhas desejado também é uma opção.
-Também é possivel dizer por parametro se queremos as linhas jutificadas ou não.
+O output estar justificado ou não também está parametrizado.
 
 Sobre o processo de desenvolvimento:
 Primeiro tentei uma abordagem visando cada caracter do texto de entrada mas depois de algum
 tempo percebi que com essa visão eu estava tendo algumas dificuldades que julguei que não teria
 utilizando as palavras completas ao invés das letras, com isso mudei de abordagem.
-O começo dessa outra abordagem não finalizada está no arquivo 'failed_attempt_1'
+O começo dessa outra abordagem não finalizada está no arquivo 'failed_attempt_1'.
+
 Após isso, utilizando as divisões de palavras e paragráfos consegui avançar mais no
 desenvolvimento da parte basica sem muitos problemas.
-Chegando a parte intermediaria esbarrei em alguns problemas ao tentar justificar algumas linhas
+Chegando a parte intermediaria esbarrei em alguns problemas ao tentar justificar algumas linhas,
 demorei algum tempo para notar que esse problema acontecia quando o numero de espaços faltantes
 superava o numero de espaços originais da linha, foi então que percebi que precisaria de um loop
 para verificar varias vezes se a linha já estava corretamente justificada, consigo pensar em

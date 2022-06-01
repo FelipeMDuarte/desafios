@@ -1,0 +1,21 @@
+Olá!
+A solução final com ambas as partes do desafio está no arquivo main.py.
+O modo de utilização do projeto pode é pela criação e execução de um Docker
+-Navegar até a pasta `crawlers`
+-Rodar `docker build -f Dockerfile -t python-docker .`
+-Rodar `docker run --rm -it python-docker`
+-Após isso podemos acessar o bot em t.me/fduarte_bot
+
+O comando do bot pode ser utilizado como NadaPraFazer, nadaprafazer ou ndpf
+E além dos subreddits ele aceita o minimo de votos para incluir um tópico na listagem,
+com 5000 sendo o padrão
+
+ex: `/NadaPraFazer worldnews;cats 1000`
+
+Sobre o processo de desenvolvimento:
+Nunca tinha feito nada sobre nenhuma das duas partes do desafio efoi o desafio que mais gostei.
+Tive que aprender tudo do zero e sinceramente não tive mt tempo pra isso por causa e entregas
+no projeto atual, por este motivo não estou totalmente feliz com a qualidade de código.
+Mesmo assim foi muito legal aprender essas duas etapas, no geral o desenvolvimento foi tranquilo
+com a maior dificuldade sendo achar as tags certas para se usar no crawler por não conhecer e
+entender bem a parte de front.
